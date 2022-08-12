@@ -21,8 +21,12 @@ function AbrirCamara(){
 // compatibildad con los navegadores
 navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
-navigator.mediaDevices.getUserMedia({video:{},
-    facingMode : isFaceUser?'user':'enviroment'
+navigator.mediaDevices.getUserMedia({
+    video:{
+        facingMode : {
+            exact:'environment'
+        }
+    }  
 }).then(function(straeam){
     mostrarStream = straeam;
     video.srcObject = straeam;
