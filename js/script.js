@@ -23,9 +23,10 @@ navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia
 
 navigator.mediaDevices.getUserMedia({
     video:{
-        facingMode : {
-            exact:'environment'
-        }
+        facingMode: isFaceUser ? 'user' : 'environment'
+        // facingMode : {
+        //     exact:'environment'
+        // }
     }  
 }).then(function(straeam){
     mostrarStream = straeam;
