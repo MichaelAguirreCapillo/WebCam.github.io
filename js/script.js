@@ -5,7 +5,7 @@ let btnCambiarCamara = document.querySelector('#btnCambiarCamara');
 let video = document.querySelector('#video');
 let canvas = document.querySelector('#canvas');
 
-let isFaceUser = false;
+var isFaceUser = false;
 var mostrarStream;
 
 btnEncenderCamara.onclick = AbrirCamara;
